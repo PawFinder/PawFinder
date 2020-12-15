@@ -2,14 +2,14 @@ const path = require('path');
 const express = require('express');
 const router = require('express').Router();
 const mongoose = require('mongoose');
-const passport = require("passport"); 
-const GoogleStrategy = require("passport-google-oauth20").Strategy; 
+const passport = require("passport");
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const keys = require('./config/keys');
 const cookieSession = require("cookie-session");
 //const User = require("your_user_model_file_path");
 require('dotenv').config();
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true  });
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', () => {
     console.log('Connected to Database');
 });
@@ -67,9 +67,6 @@ app.use(passport.session());
 
 app.use('/build', express.static(path.resolve(__dirname, 'build')));
 
-<<<<<<< HEAD
-app.use('/', (req, res) => res.sendFile(path.resolve(__dirname, 'public', 'index.html')));
-=======
 // app.use('/build', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../build/bundle.js')))
 
 // app.use('/', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../public/index.html')));
@@ -84,7 +81,6 @@ app.get("/auth/logout", (req, res) => {
     req.logout();
     res.send(req.user);
 });
->>>>>>> 8e6fe5c61c374d9f1cedc4c54e1db65b3ef3b3b4
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 
