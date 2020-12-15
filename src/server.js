@@ -6,16 +6,24 @@ const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy; 
 const keys = require('./config/keys');
 const cookieSession = require("cookie-session");
-//const User = require("your_user_model_file_path");
+const User = require("./models/pawfinderModels");
+const savedPetsCntl = require('./controllers/savedPetsController');
 require('dotenv').config();
+let petfinder = require("@petfinder/petfinder-js");
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true  });
+const app = express();
+const PORT = 3000;
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', () => {
     console.log('Connected to Database');
 });
 
-const app = express();
-const PORT = 3000;
+router.get('/modify', savedPetsCntl); 
 
 passport.use(
     new GoogleStrategy({
@@ -62,15 +70,13 @@ app.use(cookieSession({
     keys: [keys.session.cookieKey]
 }));
 
-app.use(passport.initialize());
-app.use(passport.session());
-
 app.use('/build', express.static(path.resolve(__dirname, 'build')));
 
 // app.use('/build', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../build/bundle.js')))
 
 // app.use('/', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../public/index.html')));
 app.use('/', (req, res) => res.sendFile(path.resolve(__dirname, '../public/index.html')));
+
 
 router.get("auth/google/redirect", passport.authenticate("google"), (req, res) => {
     res.send(req.user);
@@ -80,7 +86,10 @@ router.get("auth/google/redirect", passport.authenticate("google"), (req, res) =
 app.get("/auth/logout", (req, res) => {
     req.logout();
     res.send(req.user);
+    console.log('logout');
 });
+
+
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 

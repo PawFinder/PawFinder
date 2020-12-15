@@ -1,13 +1,16 @@
+const mongoose = require('mongoose'); 
+const SavedPets = require('./savedPets.js');
+const Schema = mongoose.Schema; 
 
-const monggoos = require('mongoose'); 
+const userSchema = new Schema({
+    googleId: {
+        type: String
+    },
+    savedPets: [SavedPets.schema]
+   
+});
 
-const Schema = mongoose.Schema 
-
-const User = new Schema({
-
-})
+const User = mongoose.model('user', userSchema)
 
 
-module.export = {
-User
-}
+module.exports = User; 
