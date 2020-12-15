@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { __NavBar } from '../../styles/navbar/navbar-styles';
 
-class Navbar extends Component {
-  render () {
-    return 
-  }
+const NavBar = () => {
+  return (  
+    <__NavBar>
+      Hello
+    </__NavBar>
+  ) 
 }
 
-export default Navbar;
+export default NavBar;
