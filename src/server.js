@@ -67,6 +67,9 @@ app.use(passport.session());
 
 app.use('/build', express.static(path.resolve(__dirname, 'build')));
 
+<<<<<<< HEAD
+app.use('/', (req, res) => res.sendFile(path.resolve(__dirname, 'public', 'index.html')));
+=======
 // app.use('/build', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../build/bundle.js')))
 
 // app.use('/', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../public/index.html')));
@@ -81,6 +84,7 @@ app.get("/auth/logout", (req, res) => {
     req.logout();
     res.send(req.user);
 });
+>>>>>>> 8e6fe5c61c374d9f1cedc4c54e1db65b3ef3b3b4
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 
