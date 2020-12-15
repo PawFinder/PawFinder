@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@petfinder/petfinder-js": "^1.0.6",
+    "autoprefixer": "^10.1.0",
     "concurrently": "^5.3.0",
     "cookie-session": "^1.4.0",
     "cross-env": "^7.0.3",
@@ -42,13 +43,18 @@
     "nodemon": "^2.0.6",
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0",
+
     "passport-google-oauth20": "^2.0.0",
+
+    "postcss": "^8.2.1",
+
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
     "redux": "^4.0.5",
     "request": "^2.88.2",
     "styled-components": "^5.2.1",
+    "tailwindcss": "^2.0.2",
     "webpack-dev-server": "^3.11.0"
   }
 }
