@@ -70,7 +70,7 @@ app.use('/build', express.static(path.resolve(__dirname, 'build')));
 // app.use('/build', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../build/bundle.js')))
 
 // app.use('/', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../public/index.html')));
-app.use('/', (req, res) => res.sendFile(path.resolve(__dirname, './public', 'index.html')));
+app.use('/', (req, res) => res.sendFile(path.resolve(__dirname, '../public/index.html')));
 
 router.get("auth/google/redirect", passport.authenticate("google"), (req, res) => {
     res.send(req.user);
