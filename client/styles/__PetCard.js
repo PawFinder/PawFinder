@@ -8,9 +8,8 @@ export const __PetCardBackground = styled.div`
 `;
 
 export const __PetCard = styled.figure`
-  border: 1px solid blueviolet;
-  width: 70vw;
-  height: 70vh;
+  width: 60vw;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -18,10 +17,10 @@ export const __PetCard = styled.figure`
   position: fixed;
   background-color: red;
   
-
+  top: 20%;
   bottom: 0%;
   right: 0%;
-  left: 15%;
+  left: 20%;
   border-radius: 25px;
   text-align: center;
   box-shadow: 10px 10px 20px black;
@@ -29,11 +28,9 @@ export const __PetCard = styled.figure`
 `;
 
 export const __TopPetCard = styled.article`
-
 `;
 
 export const __BottomPetCard = styled.article`
-
 `;
 
 export const __InactivePetCard = styled.figure`
@@ -44,7 +41,7 @@ export const __InactivePetCard = styled.figure`
   justify-content: center;
   align-items: center;
   transition: 400ms ease-in-out;
-
+  font-size: 1.75rem;
   &:hover {
     transform: scale(1.5);
   }
