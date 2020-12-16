@@ -17,7 +17,9 @@ const NavBar = () => {
     <__NavBar>
       <__Btn secondary>Favs</__Btn>
       <__Logo main src={pawFinderLogo}/>
-      <GoogleLogin 
+      {
+        !login ? 
+        <GoogleLogin 
         clientId="949269870683-s8cpdloouslu92ikabu07ch9fsde9kuo.apps.googleusercontent.com"
         buttonText="Login"
         onSuccess={responseGoogle}
@@ -26,8 +28,10 @@ const NavBar = () => {
         render={renderProps => (
           <__Btn primary onClick={renderProps.onClick} disabled={renderProps.disabled}>Login</__Btn>
         )}
-      />
-      {/* <__Btn primary>Login</__Btn> */}
+        />
+        :
+        <h1 style={{color: "red", marginRight: "2em", fontWeight: "bold"}}>Welcome!</h1>
+      }
     </__NavBar>
   ) 
 }
