@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import GoogleLogin from 'react-google-login';
-
+import GoogleLogout from 'react-google-login';
 import { __NavBar } from '../styles/__NavBar';
 import { __Btn, __Logo } from '../styles/__Utils';
 import pawFinderLogo from '../icons/location.svg';
@@ -30,10 +30,16 @@ const NavBar = () => {
         )}
         />
         :
-        <h1 style={{color: "red", marginRight: "2em", fontWeight: "bold"}}>Welcome!</h1>
+          <GoogleLogout
+            clientId="949269870683-s8cpdloouslu92ikabu07ch9fsde9kuo.apps.googleusercontent.com"
+            buttonText="Logout"
+            render={renderProps => (
+              <__Btn primary onClick={renderProps.onClick} disabled={renderProps.disabled}>Logout</__Btn>
+            )}
+          />
       }
     </__NavBar>
-  ) 
+  )
 }
 
 export default NavBar;
