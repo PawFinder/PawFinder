@@ -12,7 +12,7 @@ module.exports = {
     open: true,
     port: 8080,
     proxy: {
-      '/api/': 'https://localhost:3000'
+      '/api/': 'http://localhost:3000',
     },
   },
   mode: process.env.NODE_ENV,
