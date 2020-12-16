@@ -1,11 +1,15 @@
 import React from 'react';
 
-import NavBar from './components/navbar/NavBar';
+import NavBar from './components/NavBar';
+import LandingPage from './components/landing-page/LandingPage';
+import Footer from './components/Footer';
 
 const App = () => (
   <>
     <NavBar />
-    <p>hello</p>
+    <LandingPage />
+    {/* <MainPage /> */}
+    <Footer />
   </>
 );
 
