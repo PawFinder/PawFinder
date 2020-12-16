@@ -39,7 +39,7 @@ export const __Logo = styled.img`
       cursor: default;
     }
   `}
-`
+`;
 export const __Btn = styled.button`
   padding: .6em 1em;
   border: none;
@@ -61,4 +61,23 @@ export const __Btn = styled.button`
     color: red;
     border: .05em solid red;
   `}
-`
+`;
+
+export const __TranslucentBox = styled.div`
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5em 6em;
+  text-align: center;
+  ${(props) => props.translate && css`
+    transform: translateX(34em) translateY(-5em);
+  `}
+  & h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+
+  & p {
+    margin: .2rem;
+  }
+`;
