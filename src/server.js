@@ -33,9 +33,10 @@ const clientSecret = process.env.PFSECRET
 
 const client = new petfinder.Client({ apiKey: clientId, secret: clientSecret })
 
-// get dogs upon load
+
 app.post('/feed', async (req, response) => {
 
+  console.log('Inside post.feed in server.js');
   const { type, size, age, gender, postcode } = req.body;
 
   await client.animal.search({ type: type, size: size, age: age, gender: gender, postcode: postcode })
