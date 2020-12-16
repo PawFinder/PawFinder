@@ -18,12 +18,47 @@ export const __Flex = styled.section`
   ${(props) => props.gap && css`
     gap: 2em;
   `};
+
+  ${(props) => props.spaceAround && css`
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  `}
 `;
 
-export const __SocialLogo = styled.img`
-  width: 2em;
+export const __Logo = styled.img`
+  width: 1.8em;
   &:hover {
     cursor: pointer;
     opacity: 70%;
   }
+  ${(props) => props.main && css`
+    width: 3.5em;
+    &:hover {
+      opacity: 100%;
+      cursor: default;
+    }
+  `}
+`
+export const __Btn = styled.button`
+  padding: .6em 1em;
+  border: none;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: .25em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  ${(props) => props.primary && css`
+    background-color: red;
+    color: white;
+  `}
+  ${(props) => props.secondary && css`
+    background-color: white;
+    color: red;
+    border: .05em solid red;
+  `}
 `
