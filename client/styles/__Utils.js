@@ -19,6 +19,10 @@ export const __Flex = styled.section`
     gap: 2em;
   `};
 
+  ${(props) => props.wrap && css`
+    flex-wrap: wrap;
+  `};
+
   ${(props) => props.spaceAround && css`
     justify-content: space-around;
     width: 100%;
