@@ -17,9 +17,8 @@ export const __PetCard = styled.figure`
   align-items: center;
   position: fixed;
   background-color: red;
-  z-index: 1;
-  color: white;
-  top: 15%;
+  
+
   bottom: 0%;
   right: 0%;
   left: 15%;
@@ -39,6 +38,8 @@ export const __BottomPetCard = styled.article`
 
 export const __InactivePetCard = styled.figure`
   display: flex;
+  border: .1em solid red;
+  padding: 1em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
