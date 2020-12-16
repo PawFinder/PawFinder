@@ -26,12 +26,19 @@ export const __Flex = styled.section`
   `}
 `;
 
-export const __SocialLogo = styled.img`
+export const __Logo = styled.img`
   width: 1.8em;
   &:hover {
     cursor: pointer;
     opacity: 70%;
   }
+  ${(props) => props.main && css`
+    width: 3.5em;
+    &:hover {
+      opacity: 100%;
+      cursor: default;
+    }
+  `}
 `
 export const __Btn = styled.button`
   padding: .6em 1em;
@@ -42,16 +49,13 @@ export const __Btn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-
   &:hover {
     cursor: pointer;
   }
-
   ${(props) => props.primary && css`
     background-color: red;
     color: white;
   `}
-
   ${(props) => props.secondary && css`
     background-color: white;
     color: red;
