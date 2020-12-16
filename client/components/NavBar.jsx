@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { __NavBar } from '../styles/__NavBar';
+import { __Btn } from '../styles/__Utils';
 
 const NavBar = () => {
   return (  
     <__NavBar>
-      <h1>Favs</h1>
+      <__Btn secondary>Favs</__Btn>
       <img alt="PawFinder logo"/>
-      <h1>Login</h1>
+      <__Btn primary>Login</__Btn>
     </__NavBar>
   ) 
 }
