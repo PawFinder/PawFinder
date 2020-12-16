@@ -1,12 +1,18 @@
 import React from 'react';
 
-import { __Mission } from '../../styles/__Mission'
+import { __Mission } from '../../styles/__Mission';
+import { __Flex, __TranslucentBox } from '../../styles/__Utils';
 
 const Mission = () => {
   return (
     <__Mission>
-      <img alt="animal slide show"/>
-      <h1>"Mission"</h1>
+      <__Flex row spaceAround>
+        <__TranslucentBox translate>
+          <h1>PAW FINDER</h1>
+          <p>TO BRING ABOUT A TIME</p>
+          <p>WHERE NO PET IS HOMELESS</p>
+        </__TranslucentBox>
+      </__Flex>
     </__Mission>
   )
 }

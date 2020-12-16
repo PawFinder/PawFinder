@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', () => {
-    console.log('Connected to Database'); 
+  console.log('Connected to Database');
 });
 
 const clientId = process.env.PFCLIENTID
@@ -35,16 +35,16 @@ const client = new petfinder.Client({ apiKey: clientId, secret: clientSecret })
 
 // get dogs upon load
 app.post('/feed', async (req, response) => {
-    
-    const {type, size, age, gender, postcode} = req.body; 
 
-    await client.animal.search({ type: type, size: size, age: age, gender: gender, postcode: postcode})
-        .then(res => {
-            response.send(res.data.animals)
-        })
+  const { type, size, age, gender, postcode } = req.body;
+
+  await client.animal.search({ type: type, size: size, age: age, gender: gender, postcode: postcode })
+    .then(res => {
+      response.send(res.data.animals)
+    })
 })
 
-router.get('/favorites', savedPetsCntl); 
+router.get('/favorites', savedPetsCntl);
 
 app.use('/build', express.static(path.resolve(__dirname, 'build')));
 
@@ -52,14 +52,14 @@ app.use('/', (req, res) => res.sendFile(path.resolve(__dirname, '../public/index
 
 
 router.get("auth/google/redirect", passport.authenticate("google"), (req, res) => {
-    res.send(req.user);
-    res.send("you reached the redirect URI");
+  res.send(req.user);
+  res.send("you reached the redirect URI");
 });
 
 app.get("/auth/logout", (req, res) => {
-    req.logout();
-    res.send(req.user);
-    console.log('logout');
+  req.logout();
+  res.send(req.user);
+  console.log('logout');
 });
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
