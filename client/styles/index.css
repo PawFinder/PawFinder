@@ -1,9 +1,12 @@
 *,
 *::before,
 *::after {
-  box-sizing: content-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: ff-tisa-sans-web-pro, sans-serif;
+  font-style: normal;
+  font-weight: 100;
 }
 
 body,
@@ -14,13 +17,13 @@ body,
 
 #root {
   display: grid;
-  grid-template-rows: 4em repeat(4, auto) auto;
-  grid-template-columns: 3em repeat(3, auto) 3em;
+  grid-template-rows: 4.8em 93vh repeat(2, auto) auto;
+  grid-template-columns: 4em repeat(3, auto) 4em;
   grid-template-areas:
     'navbar navbar navbar navbar navbar'
-    '...... mission mission mission ......'
-    '...... mission mission mission ......'
-    '...... demo demo demo ......'
-    '...... demo demo demo ......'
+    'mission mission mission mission mission'
+    'mission mission mission mission mission'
+    'demo demo demo demo demo'
+    'demo demo demo demo demo'
     'footer footer footer footer footer';
 }
