@@ -21,8 +21,9 @@ export const __Flex = styled.section`
 `;
 
 export const __SocialLogo = styled.img`
-  width: 1em;
+  width: 2em;
   &:hover {
+    cursor: pointer;
     opacity: 70%;
   }
 `
