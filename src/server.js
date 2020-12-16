@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+
 const router = require('express').Router();
 const mongoose = require('mongoose');
 const passport = require("passport");
@@ -45,56 +46,8 @@ app.post('/feed', async (req, response) => {
 
 router.get('/favorites', savedPetsCntl); 
 
-passport.use(
-    new GoogleStrategy({
-        clientID: keys.google.clientID,
-        clientSecret: keys.google.clientSecret,
-        callbackURL: '/auth/google/redirect'
-    }, (accessToken, refreshToken, profile, done) => {
-        // passport callback function
-        //check if user already exists in our db with the given profile ID
-        User.findOne({ googleId: profile.id }).then((currentUser) => {
-            if (currentUser) {
-                //if we already have a record with the given profile ID
-                done(null, currentUser);
-            } else {
-                //if not, create a new user 
-                new User({
-                    googleId: profile.id,
-                }).save().then((newUser) => {
-                    done(null, newUser);
-                });
-            }
-        })
-    })
-);
-
-app.get("/auth/google", passport.authenticate("google", {
-    scope: ["profile", "email"]
-}));
-app.get("/auth/google/redirect", passport.authenticate('google'));
-
-passport.serializeUser((user, done) => {
-    done(null, user.id);
-});
-
-passport.deserializeUser((id, done) => {
-    User.findById(id).then(user => {
-        done(null, user);
-    });
-});
-
-app.use(cookieSession({
-    // milliseconds of a day
-    maxAge: 24 * 60 * 60 * 1000,
-    keys: [keys.session.cookieKey]
-}));
-
 app.use('/build', express.static(path.resolve(__dirname, 'build')));
 
-// app.use('/build', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../build/bundle.js')))
-
-// app.use('/', (req, res) => res.status(200).sendFile(path.resolve(__dirname, '../public/index.html')));
 app.use('/', (req, res) => res.sendFile(path.resolve(__dirname, '../public/index.html')));
 
 
@@ -108,8 +61,6 @@ app.get("/auth/logout", (req, res) => {
     res.send(req.user);
     console.log('logout');
 });
-
-
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 

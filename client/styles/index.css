@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: 4em repeat(4, auto) auto;
+  grid-template-columns: 3em repeat(3, auto) 3em;
+  grid-template-areas:
+    'navbar navbar navbar navbar navbar'
+    '...... mission mission mission ......'
+    '...... mission mission mission ......'
+    '...... demo demo demo ......'
+    '...... demo demo demo ......'
+    'footer footer footer footer footer';
+}
