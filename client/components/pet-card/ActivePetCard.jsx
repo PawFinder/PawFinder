@@ -9,10 +9,21 @@ import {
 import { __Flex } from '../../styles/__Utils';
 
 const ActivePetCard = (props) => {
-  const { image, name, age, gender, breed, size, video, desc, contact } = props;
+  const {
+    image,
+    name,
+    age,
+    gender,
+    breed,
+    size,
+    video,
+    desc,
+    contact,
+    active,
+    setActive,
+  } = props;
   return (
     <__PetCard>
-      <__PetCardBackground></__PetCardBackground>
       <__TopPetCard>
         <__Flex row gap>
           {image}
@@ -38,6 +49,7 @@ const ActivePetCard = (props) => {
           <p>{`Contact: ${contact}`}</p>
         </__Flex>
       </__BottomPetCard>
+      <__PetCardBackground onClick={() => setActive(!active)}/>
     </__PetCard>
   );
 };

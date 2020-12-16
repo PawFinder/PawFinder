@@ -8,7 +8,7 @@ const Demo = () => {
   return (
     <__Demo>
       <__ExampleContainer>
-        <__Flex row>
+        <__Flex row spaceAround>
           <PetCard image={<img alt='image'/>} name="Name" age="1" gender="female" breed="maltese" size="small" video="" desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit aspernatur recusandae sed voluptas." contact="info"/>
           <PetCard image={<img alt='image'/>} name="Name" age="1" gender="female" breed="maltese" size="small" video="" desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit aspernatur recusandae sed voluptas." contact="info"/>
           <PetCard image={<img alt='image'/>} name="Name" age="1" gender="female" breed="maltese" size="small" video="" desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit aspernatur recusandae sed voluptas." contact="info"/>

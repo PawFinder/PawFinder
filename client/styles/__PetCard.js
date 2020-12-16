@@ -1,22 +1,32 @@
 import styled from 'styled-components';
 
+export const __PetCardBackground = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+`;
+
 export const __PetCard = styled.figure`
   border: 1px solid blueviolet;
-  padding: .8em;
+  width: 70vw;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  position: relative;
-`;
-
-export const __PetCardBackground = styled.div`
-  position: absolute;
-  width: 200px;
-  top: 100%;
-  bottom: 100%;
-  background: black;
-  filter: blur(20px);
+  position: fixed;
+  background-color: red;
+  z-index: 1;
+  color: white;
+  top: 15%;
+  bottom: 0%;
+  right: 0%;
+  left: 15%;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 10px 10px 20px black;
+  filter: none;
 `;
 
 export const __TopPetCard = styled.article`

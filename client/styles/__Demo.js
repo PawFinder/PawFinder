@@ -14,4 +14,5 @@ export const __ExampleContainer = styled.section`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
 `;
