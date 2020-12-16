@@ -1,13 +1,15 @@
+const mongoose = require('mongoose'); 
+const SavedPets = require('./savedPets.js');
+const Schema = mongoose.Schema; 
 
-const mongoose = require('mongoose');
+const userSchema = new Schema({
+    googleId: {
+        type: String
+    },
+    savedPets: { type: mongoose.Schema.Types.ObjectId, ref: 'SavedPets' },
+   
+});
 
-const Schema = mongoose.Schema
+const User = mongoose.model('user', userSchema)
 
-const User = new Schema({
-
-})
-
-
-module.export = {
-  User
-}
+module.exports = User; 
