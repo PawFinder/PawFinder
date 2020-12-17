@@ -83,10 +83,8 @@ export default function DialogSelect() {
     };
  
   
-
   //onClick we want to send a fetch request to backend, sending the current state in body 
   //also redirect user to new component with card info rendered (render the PetCard component)
-
 
 
   return (
