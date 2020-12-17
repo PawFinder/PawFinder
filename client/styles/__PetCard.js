@@ -45,6 +45,7 @@ export const __InactivePetCard = styled.figure`
   font-size: 1.75rem;
   background-color: whitesmoke;
   &:hover {
+    cursor: pointer;
     -webkit-transform: scale(1.5);
   }
   & img {
@@ -60,12 +61,10 @@ export const __InactivePetCard = styled.figure`
     justify-content: center;
     align-items: center;
     background-color: #F5F5F5;
-    /* border: .2em solid black; */
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
   }
 
   & h1 {
-
   }
 `;

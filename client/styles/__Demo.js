@@ -14,7 +14,7 @@ export const __ExampleContainer = styled.section`
   // border: 1px solid orange;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
 `;

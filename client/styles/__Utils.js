@@ -67,7 +67,11 @@ border-radius: 5px;
   ${(props) => props.secondary && css`
     background-color: whitesmoke;
     color: red;
-    // border: .05em solid red;
+    border: .05em solid red;
+  `}
+  ${(props) => props.navbar && css`
+    box-shadow: none;
+    border: 
   `}
 `;
 
