@@ -67,8 +67,9 @@ router.get("auth/google/redirect", passport.authenticate("google"), (req, res) =
 
 app.get("/auth/logout", (req, res) => {
   req.logout();
-  res.send(req.user);
-  console.log('logout');
+  // res.send(req.user);
+  // console.log('logout');
+  res.sendFile(path.resolve(__dirname, '../public/index.html'));
 });
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
