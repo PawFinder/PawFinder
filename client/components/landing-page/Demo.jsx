@@ -32,7 +32,8 @@ const Demo = () => {
               desc={animal.description}
               contact={animal.contact}
               mediumImg={animal.photos[0].medium}
-              mediumImg={animal.photos[0].large}
+              largeImg={animal.photos[0].large}
+              status={animal.status}
             />
           ))
         );
@@ -48,7 +49,7 @@ const Demo = () => {
       size={petData.size}
       desc={petData.description}
       contact={petData.contact}
-      smallImg={petData.photos[0].small}
+      largeImg={petData.photos[0].large}
       mediumImg={petData.photos[0].medium}
     />
   ));
