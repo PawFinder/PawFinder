@@ -24,31 +24,34 @@ const ActivePetCard = (props) => {
   return (
     <__PetCard>
       <__TopPetCard>
-        <__Flex row gap>
-          <img src={largeImg} alt="medium pet image"/>
-          <__Flex column gap>
-            <h1>{name}</h1>
-            <__Flex row gap>
-              <__Flex column>
-                <h1>{`Age: ${age}`}</h1>
-                <h1>{`Type: ${type}`}</h1>
-              </__Flex>
-              <__Flex column>
-                <h1>{`Gender: ${gender}`}</h1>
-                <h1>{`Size: ${size}`}</h1>
-              </__Flex>
-            </__Flex>
-          </__Flex>
-        </__Flex>
+        <img
+          style={{
+            width: '30em',
+            height: '35em',
+            objectFit: 'cover',
+            margin: '.5em 3.5em'
+          }}
+          src={largeImg}
+          alt='medium pet image'
+        />
       </__TopPetCard>
       <__BottomPetCard>
-        <__Flex column gap>
-          <p>{`Description: ${desc}`}</p>
-          <p>{`Email: ${contact.email}`}</p>
-          <p>{`Phone: ${contact.phone}`}</p>
+        <h1 style={{ marginBottom: '.3.5em', fontSize: '3.2rem' }}>{name}</h1>
+        <__Flex gap row>
+          <__Flex column>
+            <h1 style={{ fontSize: '1.7rem'}}>{`Type: ${type}`}</h1>
+            <h1 style={{ fontSize: '1.7rem'}}>{`Age: ${age}`}</h1>
+          </__Flex>
+          <__Flex column>
+            <h1 style={{ fontSize: '1.7rem'}}>{`Gender: ${gender}`}</h1>
+            <h1 style={{ fontSize: '1.7rem'}}>{`Size: ${size}`}</h1>
+          </__Flex>
         </__Flex>
+        <p style={{ fontSize: '1.7rem', maxWidth: '70%', marginTop: '2.5em'}}>{`Description: ${desc}`}</p>
+        <p style={{ fontSize: '1.7rem', maxWidth: '70%', marginTop: '3em'}}>{`Email: ${contact.email}`}</p>
+        <p style={{ fontSize: '1.7rem', maxWidth: '70%'}}>{`Phone: ${contact.phone}`}</p>
       </__BottomPetCard>
-      <__PetCardBackground onClick={() => setActive(!active)}/>
+      <__PetCardBackground onClick={() => setActive(!active)} />
     </__PetCard>
   );
 };

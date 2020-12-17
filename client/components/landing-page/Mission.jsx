@@ -9,8 +9,8 @@ const Mission = () => {
       <__Flex row spaceAround>
         <__TranslucentBox translate>
           <h1>PAW FINDER</h1>
-          <p>WORKING TOWARDS A FUTURE</p>
-          <p>WHERE NO PET IS HOMELESS</p>
+          <p style={{opacity: 0.7}}>WORKING TOWARDS A FUTURE</p>
+          <p style={{opacity: 0.7}}>WHERE NO PET IS HOMELESS</p>
         </__TranslucentBox>
       </__Flex>
     </__Mission>
