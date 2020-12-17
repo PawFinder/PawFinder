@@ -39,16 +39,19 @@ const client = new petfinder.Client({ apiKey: clientId, secret: clientSecret })
 app.post('/feed', async (req, response) => {
 
   console.log('Inside post.feed in server.js', req.body);
-
-  const { type, size, age, gender, postcode } = req.body;
+ 
+  const { type, size, age, gender, location } = req.body;
 
 console.log("Type of animal in req.body", req.body);
   //let postcode = contact.adress.postcode; 
-  await client.animal.search({ 'type': type, 'size': size, 'age': age, 'gender': gender, 'postcode': postcode })
+  await client.animal.search({ 'type': type, 'size': size, 'age': age, 'gender': gender, 'location': location })
     .then(res => {
       response.send(res.data.animals)
     })
-})
+    .catch(function (error) {
+      console.log(error)
+    })
+    })
 
 router.get('/favorites', savedPetsCntl);
 

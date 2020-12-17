@@ -4,9 +4,9 @@ import InactivePetCard from './pet-card/InactivePetCard';
 
 import { __Flex } from '../styles/__Utils';
 
-const PetCard = (props) => {
+const PetCard = (props) => { 
   const [active, setActive] = useState(false);
-  const { image, name, age, gender, breed, size, video, desc, contact } = props;
+  const { image, name, age, gender, size, description, contact } = props;
   return active ? (
     <__Flex row>
       <ActivePetCard
@@ -14,25 +14,23 @@ const PetCard = (props) => {
         name={name}
         age={age}
         gender={gender}
-        breed={breed}
         size={size}
-        video={video}
-        desc={desc}
+        desc={description}
         contact={contact}
         active={active}
         setActive={setActive}
       ></ActivePetCard>
     </__Flex>
   ) : (
-    <__Flex row>
-      <InactivePetCard
-        image={image}
-        name={name}
-        active={active}
-        setActive={setActive}
-      ></InactivePetCard>
-    </__Flex>
-  );
+      <__Flex row>
+        <InactivePetCard
+          image={image}
+          name={name}
+          active={active}
+          setActive={setActive}
+        ></InactivePetCard>
+      </__Flex>
+    );
 };
 
 export default PetCard;

@@ -14,10 +14,8 @@ const ActivePetCard = (props) => {
     name,
     age,
     gender,
-    breed,
     size,
-    video,
-    desc,
+    description,
     contact,
     active,
     setActive,
@@ -32,20 +30,19 @@ const ActivePetCard = (props) => {
             <__Flex row gap>
               <__Flex column>
                 <h1>{age}</h1>
-                <h1>{breed}</h1>
               </__Flex>
               <__Flex column>
                 <h1>{gender}</h1>
                 <h1>{size}</h1>
               </__Flex>
             </__Flex>
-            {`vid link: ${video}`}
+            {/* {`vid link: ${video}`} */}
           </__Flex>
         </__Flex>
       </__TopPetCard>
       <__BottomPetCard>
         <__Flex column gap>
-          <p>{`Description: ${desc}`}</p>
+          <p>{`Description: ${description}`}</p>
           <p>{`Contact: ${contact}`}</p>
         </__Flex>
       </__BottomPetCard>
