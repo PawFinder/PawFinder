@@ -65,20 +65,20 @@ export default function DialogSelect() {
   };
 
   
-    // const handleOk = () => {
-    //   const currState = {
-    //     age: age,
-    //     type: type,
-    //     gender: gender, 
-    //     size: size, 
-    //     postcode: zipcode
-    //   }
-    //   axios.post('/api/feed', {currState})
-    //     .then(res => {
-    //       console.log(res); 
-    //     console.log(res.data); 
-    //   })
-    // };
+    const handleOk = () => {
+    
+      axios.post('http://localhost:3000/feed',{
+        "age": age,
+        "type": type,
+        "gender": gender, 
+        "size": size, 
+        "postcode": zipcode
+      })
+        .then(res => {
+          console.log(res); 
+        console.log(res.data); 
+      })
+    };
  
   
 
