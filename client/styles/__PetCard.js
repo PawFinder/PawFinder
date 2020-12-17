@@ -42,7 +42,6 @@ export const __InactivePetCard = styled.figure`
   transition: 400ms ease-in-out;
   font-size: 1.75rem;
   &:hover {
-    /* transform: scale(1.5); */
-    -4-webkit-transform: translate3d(0,0,3);
+    -webkit-transform: scale(1.5);
   }
 `;
