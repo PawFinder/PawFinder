@@ -8,7 +8,6 @@ import DialogSelect from './components/landing-page/Search';
 const App = () => (
   <>
     <NavBar />
-    <DialogSelect />
     <LandingPage />
     {/* <MainPage /> */}
     <Footer />
