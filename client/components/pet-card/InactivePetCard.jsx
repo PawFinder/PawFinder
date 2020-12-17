@@ -7,7 +7,9 @@ const InactivePetCard = (props) => {
   return (
     <__InactivePetCard column onClick={() => setActive(!active)}>
       <img src={smallImg} alt="pet image" />
-      <h1>{name}</h1>
+      <div>
+        <h1>{name}</h1>
+      </div>
     </__InactivePetCard>
   );
 };
