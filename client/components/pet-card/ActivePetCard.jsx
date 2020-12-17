@@ -14,7 +14,6 @@ const ActivePetCard = (props) => {
     name,
     age,
     gender,
-    breed,
     size,
     type,
     desc,

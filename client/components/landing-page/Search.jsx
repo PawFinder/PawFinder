@@ -38,7 +38,7 @@ export default function DialogSelect() {
   const [type, setType] = React.useState('');
   const [gender, setGender] = React.useState('');
   const [size, setSize] = React.useState('');
-  const [zipcode, setZipCode] = React.useState(''); 
+  const [location, setLocation] = React.useState(''); 
 
   const handleAge = (event) => {
     setAge((event.target.value) || '');
@@ -53,8 +53,8 @@ export default function DialogSelect() {
     setSize((event.target.value) || '');
   };
   
-  const handleZipCode = (event) => {
-    setZipCode(event.target.value || '');
+  const handleLocation = (event) => {
+    setLocation(event.target.value || '');
   };
   
   const handleClickOpen = () => {
@@ -67,17 +67,18 @@ export default function DialogSelect() {
 
   
     const handleOk = () => {
-      const currState = {
-        age: age,
-        type: type,
-        gender: gender, 
-        size: size, 
-        postcode: zipcode
-      }
-      axios.post('/api/feed', {currState})
+    
+      axios.post('http://localhost:3000/feed',{
+        "age": age,
+        "type": type,
+        "gender": gender, 
+        "size": size, 
+        "location": location  
+      })
         .then(res => {
-          console.log(res); 
+        console.log(res); 
         console.log(res.data); 
+          let result = res.data.map((animal) => <PetCard data={animal} />)
       })
     };
  
@@ -150,7 +151,8 @@ export default function DialogSelect() {
                 <MenuItem value={"Male"}>Male</MenuItem>
               </Select>
             </FormControl>
-            <TextField id="standard-search" label="Zipcode" type="search" onChange={handleZipCode} value={zipcode}/>
+            <TextField id="standard-search" required label="Zip" type="search" onChange={handleLocation} value={location} helperText="Required"/>
+           
           </form>
         </DialogContent>
         <DialogActions>

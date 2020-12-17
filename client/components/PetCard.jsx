@@ -4,7 +4,7 @@ import InactivePetCard from './pet-card/InactivePetCard';
 
 import { __Flex } from '../styles/__Utils';
 
-const PetCard = (props) => {
+const PetCard = (props) => { 
   const [active, setActive] = useState(false);
   const {
     smallImg,
@@ -25,7 +25,6 @@ const PetCard = (props) => {
         name={name}
         age={age}
         gender={gender}
-        breed={breed}
         size={size}
         type={type}
         desc={desc}
