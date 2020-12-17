@@ -26,7 +26,7 @@ const NavBar = () => {
       {console.log(login)}
       
     <__NavBar>
-      <__Btn secondary navbar>Favs</__Btn>
+      <__Btn secondary>Favs</__Btn>
       <__Logo main src={pawFinderLogo}/>
         {
           !login ?
@@ -37,11 +37,11 @@ const NavBar = () => {
               onFailure={responseGoogle}
               cookiePolicy="single_host_origin"
               render={renderProps => (
-                <__Btn primary navbar onClick={renderProps.onClick} disabled={renderProps.disabled}>Login</__Btn>
+                <__Btn primary onClick={renderProps.onClick} disabled={renderProps.disabled}>Login</__Btn>
               )}
             />
             :
-                <__Btn primary navbar onClick={logout}>Logout</__Btn>
+                <__Btn primary onClick={logout}>Logout</__Btn>
         }
     </__NavBar>
 
