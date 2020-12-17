@@ -95,7 +95,6 @@ export default function DialogSelect() {
         <DialogTitle>Adopt a Paw 🐶</DialogTitle>
         <DialogContent>
           <form className={classes.container}>
-           
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="demo-dialog-native">Type</InputLabel>
               <Select
