@@ -12,7 +12,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios'; 
-import Petcard from '../PetCard'; 
+import { __Btn } from '../../styles/__Utils';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -91,12 +91,11 @@ export default function DialogSelect() {
 
   return (
     <div>
-      <Button onClick={handleClickOpen}>FIND A PAW</Button>
+      <__Btn secondary onClick={handleClickOpen}>Adopt a Paw 🐶</__Btn>
       <Dialog disableBackdropClick disableEscapeKeyDown open={open} onClose={handleCancel}>
-        <DialogTitle>Find a paw</DialogTitle>
+        <DialogTitle>Adopt a Paw 🐶</DialogTitle>
         <DialogContent>
-          <form className={classes.container} >
-           
+          <form className={classes.container}>
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="demo-dialog-native">Type</InputLabel>
               <Select

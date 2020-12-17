@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const __Flex = styled.section`
   ${(props) => props.row && css`
@@ -17,6 +17,11 @@ export const __Flex = styled.section`
 
   ${(props) => props.gap && css`
     gap: 2em;
+  `};
+
+  ${(props) => props.wrap && css`
+    flex-wrap: wrap;
+    gap: 5em;
   `};
 
   ${(props) => props.spaceAround && css`
@@ -80,4 +85,41 @@ export const __TranslucentBox = styled.div`
   & p {
     margin: .2rem;
   }
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
+export const __Paw = styled.img`
+  position: absolute;
+
+  ${(props) => props.one && css`
+    right: 16%;
+    bottom: 4%;
+    transform: rotate(60deg);
+    animation: 15000ms ${fadeIn} ease-in-out;
+  `}
+  ${(props) => props.two && css`
+    right: 9%;
+    bottom: 1%;
+    transform: rotate(60deg);
+    animation: 15000ms ${fadeIn} 3000ms ease-in-out;
+  `}
+  ${(props) => props.three && css`
+    right: 8%;
+    bottom: 48%;
+    transform: rotate(60deg);
+    animation: 15000ms ${fadeIn} 6000ms ease-in-out;
+  `}
+  ${(props) => props.four && css`
+    right: 2%;
+    transform: rotate(60deg);
+    animation: 15000ms ${fadeIn} 9000ms ease-in-out;
+  `}
 `;

@@ -7,6 +7,7 @@ export const __Demo = styled.section`
   grid-area: demo;
   justify-content: center;
   align-items: center;
+  background-color: #A8D0E6;
 `;
 
 export const __ExampleContainer = styled.section`

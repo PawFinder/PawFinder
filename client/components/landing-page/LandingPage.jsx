@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Mission from './Mission';
 import Demo from './Demo';
 

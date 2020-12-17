@@ -10,12 +10,13 @@ import { __Flex } from '../../styles/__Utils';
 
 const ActivePetCard = (props) => {
   const {
-    image,
+    mediumImg,
     name,
     age,
     gender,
     size,
-    description,
+    type,
+    desc,
     contact,
     active,
     setActive,
@@ -24,26 +25,27 @@ const ActivePetCard = (props) => {
     <__PetCard>
       <__TopPetCard>
         <__Flex row gap>
-          {image}
+          <img src={mediumImg} alt="medium pet image"/>
           <__Flex column gap>
             <h1>{name}</h1>
             <__Flex row gap>
               <__Flex column>
-                <h1>{age}</h1>
+                <h1>{`Age: ${age}`}</h1>
+                <h1>{`Type: ${type}`}</h1>
               </__Flex>
               <__Flex column>
-                <h1>{gender}</h1>
-                <h1>{size}</h1>
+                <h1>{`Gender: ${gender}`}</h1>
+                <h1>{`Size: ${size}`}</h1>
               </__Flex>
             </__Flex>
-            {/* {`vid link: ${video}`} */}
           </__Flex>
         </__Flex>
       </__TopPetCard>
       <__BottomPetCard>
         <__Flex column gap>
-          <p>{`Description: ${description}`}</p>
-          <p>{`Contact: ${contact}`}</p>
+          <p>{`Description: ${desc}`}</p>
+          <p>{`Email: ${contact.email}`}</p>
+          <p>{`Phone: ${contact.phone}`}</p>
         </__Flex>
       </__BottomPetCard>
       <__PetCardBackground onClick={() => setActive(!active)}/>

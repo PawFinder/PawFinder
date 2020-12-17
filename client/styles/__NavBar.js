@@ -6,5 +6,4 @@ export const __NavBar = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid red; */
 `;
