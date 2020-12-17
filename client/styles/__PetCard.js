@@ -8,7 +8,7 @@ export const __PetCardBackground = styled.div`
 `;
 
 export const __PetCard = styled.figure`
-  background-color: #F76C6C;
+  background-color: whitesmoke;
   width: 60vw;
   height: 60vh;
   display: flex;
@@ -35,6 +35,7 @@ export const __BottomPetCard = styled.article`
 export const __InactivePetCard = styled.figure`
   display: flex;
   width: 10em;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   height: 13em;
   margin: 1.4em .5em;
   flex-direction: column;
