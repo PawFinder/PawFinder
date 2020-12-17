@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const __Demo = styled.section`
-  border: 1px solid green;
+  border: .2em solid green;
   display: flex;
   padding: 2em;
   grid-area: demo;
@@ -11,10 +11,11 @@ export const __Demo = styled.section`
 `;
 
 export const __ExampleContainer = styled.section`
-  border: 1px solid orange;
+  border: .2em solid orange;
+  padding: .4em;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
 `;
