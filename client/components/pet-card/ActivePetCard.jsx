@@ -10,7 +10,7 @@ import { __Flex } from '../../styles/__Utils';
 
 const ActivePetCard = (props) => {
   const {
-    mediumImg,
+    largeImg,
     name,
     age,
     gender,
@@ -25,7 +25,7 @@ const ActivePetCard = (props) => {
     <__PetCard>
       <__TopPetCard>
         <__Flex row gap>
-          <img src={mediumImg} alt="medium pet image"/>
+          <img src={largeImg} alt="medium pet image"/>
           <__Flex column gap>
             <h1>{name}</h1>
             <__Flex row gap>
