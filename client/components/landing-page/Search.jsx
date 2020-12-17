@@ -152,7 +152,6 @@ export default function DialogSelect() {
               </Select>
             </FormControl>
             <TextField id="standard-search" required label="Zip" type="search" onChange={handleLocation} value={location} helperText="Required"/>
-           
           </form>
         </DialogContent>
         <DialogActions>

@@ -36,7 +36,7 @@ const PetCard = (props) => {
   ) : (
     <__Flex row>
       <InactivePetCard
-        smallImg={smallImg}
+        mediumImg={mediumImg}
         name={name}
         active={active}
         setActive={setActive}
