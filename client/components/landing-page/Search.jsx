@@ -11,7 +11,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
-import axios from 'axios'; 
 import { __Btn } from '../../styles/__Utils';
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DialogSelect() {
+export default function DialogSelect(props) {
+  const { handleOk } = props;
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [age, setAge] = React.useState('');
@@ -65,29 +65,8 @@ export default function DialogSelect() {
     setOpen(false);
   };
 
-  
-    const handleOk = () => {
-    
-      axios.post('http://localhost:3000/feed',{
-        "age": age,
-        "type": type,
-        "gender": gender, 
-        "size": size, 
-        "location": location  
-      })
-        .then(res => {
-        console.log(res); 
-        console.log(res.data); 
-          let result = res.data.map((animal) => <PetCard data={animal} />)
-      })
-    };
- 
-  
-
   //onClick we want to send a fetch request to backend, sending the current state in body 
   //also redirect user to new component with card info rendered (render the PetCard component)
-
-
 
   return (
     <div>
@@ -158,7 +137,7 @@ export default function DialogSelect() {
           <Button onClick={handleCancel} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleOk} color="primary">
+          <Button onClick={() => handleOk(age, type, gender, size, location)} color="primary">
             Ok
           </Button>
         </DialogActions>
