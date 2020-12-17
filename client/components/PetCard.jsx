@@ -9,9 +9,11 @@ const PetCard = (props) => {
   const {
     smallImg,
     mediumImg,
+    largeImg,
     name,
     age,
     gender,
+    status,
     breed,
     size,
     type,
@@ -21,7 +23,7 @@ const PetCard = (props) => {
   return active ? (
     <__Flex row>
       <ActivePetCard
-        mediumImg={mediumImg}
+        largeImg={largeImg}
         name={name}
         age={age}
         gender={gender}
