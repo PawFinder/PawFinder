@@ -33,7 +33,6 @@ export const __BottomPetCard = styled.article`
 
 export const __InactivePetCard = styled.figure`
   display: flex;
-  border: .1em solid red;
   padding: 1em;
   margin: 1.4em .5em;
   flex-direction: column;
@@ -41,6 +40,7 @@ export const __InactivePetCard = styled.figure`
   align-items: center;
   transition: 400ms ease-in-out;
   font-size: 1.75rem;
+  background-color: whitesmoke;
   &:hover {
     -webkit-transform: scale(1.5);
   }
