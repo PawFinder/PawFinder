@@ -48,7 +48,7 @@ export const __Logo = styled.img`
 export const __Btn = styled.button`
 border-radius: 5px;
   padding: .6em 1em;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 3.5px 7px rgba(0,0,0,0.25);
   border: none;
   font-size: 1.25em;
   font-weight: bold;
@@ -64,14 +64,13 @@ border-radius: 5px;
     background-color: red;
     color: whitesmoke;
   `}
+  ${(props) => props.navbar && css`
+    box-shadow: none;
+  `}
   ${(props) => props.secondary && css`
     background-color: whitesmoke;
     color: red;
     border: .05em solid red;
-  `}
-  ${(props) => props.navbar && css`
-    box-shadow: none;
-    border: 
   `}
 `;
 

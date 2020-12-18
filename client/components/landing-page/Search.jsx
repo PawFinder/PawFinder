@@ -137,7 +137,12 @@ export default function DialogSelect(props) {
           <Button onClick={handleCancel} color="primary">
             Cancel
           </Button>
-          <Button onClick={() => handleOk(age, type, gender, size, location)} color="primary">
+          <Button onClick={() => {
+              handleOk(age, type, gender, size, location);
+              setOpen(false);
+            }} 
+            color="primary"
+            >
             Ok
           </Button>
         </DialogActions>
