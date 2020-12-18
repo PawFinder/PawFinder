@@ -36,7 +36,7 @@ const ActivePetCard = (props) => {
         />
       </__TopPetCard>
       <__BottomPetCard>
-        <h1 style={{ marginBottom: '.3.5em', fontSize: '3.2rem' }}>{name}</h1>
+        <h1 style={{ marginBottom: '.3.5em', fontSize: '3.2rem' }}>{`🎄 ${name}`}</h1>
         <__Flex gap row>
           <__Flex column>
             <h1 style={{ fontSize: '1.7rem'}}>{`Type: ${type}`}</h1>

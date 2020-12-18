@@ -18,7 +18,7 @@ body,
 
 #root {
   display: grid;
-  grid-template-rows: 4.8em 93vh repeat(2, auto) auto;
+  grid-template-rows: 4.8em 94.5vh repeat(2, auto) auto;
   grid-template-columns: 4em repeat(3, auto) 5em;
   grid-template-areas:
     'navbar navbar navbar navbar navbar'

@@ -29,7 +29,7 @@ export const demoData = [
     age: 'Baby',
     gender: 'Female',
     size: 'Medium',
-    name: 'Cinnamon & Pudding',
+    name: 'Cinnamon',
     description:
       'For information or to complete the required application: Visit our website; www.hwhanimalrescue.com\n\nBonded Pair - Must be adopted together.',
     photos: [

@@ -8,7 +8,7 @@ const InactivePetCard = (props) => {
     <__InactivePetCard column onClick={() => setActive(!active)}>
       <img src={mediumImg} alt="pet image" />
       <div>
-        <h1>{name}</h1>
+        <h1>{`❄ ${name} ❄`}</h1>
       </div>
     </__InactivePetCard>
   );
