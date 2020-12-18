@@ -64,6 +64,9 @@ border-radius: 5px;
     background-color: red;
     color: whitesmoke;
   `}
+  ${(props) => props.navbar && css`
+    box-shadow: none;
+  `}
   ${(props) => props.secondary && css`
     background-color: whitesmoke;
     color: red;
