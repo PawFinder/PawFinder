@@ -15,5 +15,5 @@ export const __Mission = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: mission;
-  animation: 2250ms ${getColor} ease-in;
+  animation: 3000ms ${getColor} ease-in;
 `;
